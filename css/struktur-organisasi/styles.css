@@ -1,0 +1,42 @@
+.icon-detail {
+    position: absolute;
+    font-size: 15px;
+    color: blue;
+}
+.lb-uppercase-img{
+    text-transform: uppercase;
+    font-weight: 100;
+}
+.lb-uppercase-img2{
+    font-weight: 600;
+    color: #d24444;
+}
+.lb-uppercase{
+    text-transform: uppercase;
+    padding: 5px;
+}
+.contain-biografi{
+    border-bottom: inset;
+    padding: 5px;
+    text-transform: uppercase;
+}
+.img-pejabat{
+    background-image: url(https://rstugurejo.jatengprov.go.id/wp-content/uploads/2019/03/PAK-DIR-BACKGROUND-MERAH.jpg);
+    width: 200px;
+    height: 220px;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 13%;
+    border-radius: 5%;
+}
+.nama-pejabat{
+    padding-left: 10px;
+}
+.sparator-new{
+    position: absolute;
+    width: 5px;
+    height: auto;
+    left: 5px;
+}

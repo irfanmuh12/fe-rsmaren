@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="images/favicon-rsud.png" rel="shortcut icon" type="image/png">
+    <link href="images/favicon-rsud.png" rel="apple-touch-icon">
+    <link href="images/favicon-rsud.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="images/favicon-rsud.png" rel="apple-touch-icon" sizes="114x114">
+    <link href="images/favicon-rsud.png" rel="apple-touch-icon" sizes="144x144">
+
+    <title>Struktur Organisasi RSUD Tugurejo</title>
+    <link href="css/struktur-organisasi/all.css" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Gochi+Hand" rel="stylesheet">
+    <link rel="stylesheet" href="css/struktur-organisasi/struktur.css">
+    <link rel="stylesheet" href="css/struktur-organisasi/bootstrap.min.css">
+    <link rel="stylesheet" href="css/struktur-organisasi/styles.css">
+</head>
+<body>
+<div class="modal fade" tabindex="-1" role="dialog" id="modal-profil">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header modal-primary">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Biografi Pejabat</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-12">
+                    <div class="col-md-4 text-center" style="padding: 6px;">
+                        <div class="img-pejabat" id="img-pejabat"></div>
+                        <label class="col-md-12 lb-uppercase-img" id="lb-nama">Nama</label>
+                        <label class="col-md-12 lb-uppercase-img2" id="lb-jabatan">Jabatan</label>
+                    </div>
+                    <div class="col-md-8">
+                        <label for="">IDENTITAS</label>
+                    </div>
+                    <div class="col-md-8 contain-biografi">
+                        <div class="icon-detail">
+                            <i class="fas fa-chevron-circle-down"></i>
+                        </div>
+                        <div class="nama-pejabat col-md-12">
+                            <div class="col-md-5">
+                                Nama 
+                            </div>
+                            <div class="col-md-7">
+                                <div id="nama" class="nama-pejabat"></div>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="col-md-8 contain-biografi">
+                        <div class="icon-detail">
+                            <i class="fas fa-chevron-circle-down"></i>
+                        </div>
+                        <div class="nama-pejabat col-md-12">
+                            <div class="col-md-5">
+                                Tempat / Tanggal Lahir 
+                            </div>
+                            <div class="col-md-7">
+                                <div id="ttl" class="nama-pejabat">default</div>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="col-md-8 contain-biografi">
+                        <div class="icon-detail">
+                            <i class="fas fa-chevron-circle-down"></i>
+                        </div>
+                        <div class="nama-pejabat col-md-12">
+                            <div class="col-md-5">
+                                Jenis / Kelamin 
+                            </div>
+                            <div class="col-md-7">
+                                <div id="kelamin" class="nama-pejabat">default</div>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="col-md-8 contain-biografi">
+                        <div class="icon-detail">
+                            <i class="fas fa-chevron-circle-down"></i>
+                        </div>
+                        <div class="nama-pejabat col-md-12">
+                            <div class="col-md-5">
+                                Agama 
+                            </div>
+                            <div class="col-md-7">
+                                <div id="agama" class="nama-pejabat">default</div>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="col-md-8 contain-biografi">
+                        <div class="icon-detail">
+                            <i class="fas fa-chevron-circle-down"></i>
+                        </div>
+                        <div class="nama-pejabat col-md-12">
+                            <div class="col-md-5">
+                                Status 
+                            </div>
+                            <div class="col-md-7">
+                                <div id="status" class="nama-pejabat">default</div>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="col-md-8 contain-biografi">
+                        <div class="icon-detail">
+                            <i class="fas fa-chevron-circle-down"></i>
+                        </div>
+                        <div class="nama-pejabat col-md-12">
+                            <div class="col-md-5">
+                                Jenis Kepegawaian 
+                            </div>
+                            <div class="col-md-7">
+                                <div id="jenis_kepegawaian" class="nama-pejabat">default</div>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="col-md-8 contain-biografi">
+                        <div class="icon-detail">
+                            <i class="fas fa-chevron-circle-down"></i>
+                        </div>
+                        <div class="nama-pejabat col-md-12">
+                            <div class="col-md-5">
+                                Kedudukan Pegawai 
+                            </div>
+                            <div class="col-md-7">
+                                <div id="kedudukan_pegawai" class="nama-pejabat">default</div>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="col-md-8 contain-biografi">
+                        <div class="icon-detail">
+                            <i class="fas fa-chevron-circle-down"></i>
+                        </div>
+                        <div class="nama-pejabat col-md-12">
+                            <div class="col-md-5">
+                                Pendidikan Terakhir
+                            </div>
+                            <div class="col-md-7">
+                                <div id="pendidikan_terakhir" class="nama-pejabat">default</div>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-12">
+                            <label for="" class="lb-uppercase">Jabatan Struktural/fungsional/fungsional umum</label>
+                        </div>
+                        <div class="col-md-12 contain-biografi">
+                            <div class="icon-detail">
+                                <i class="fas fa-chevron-circle-down"></i>
+                            </div>
+                            <div class="nama-pejabat col-md-12">
+                                <div class="col-md-3">
+                                    NIP
+                                </div>
+                                <div class="col-md-6">
+                                    <div id="nip" class="nama-pejabat">default</div>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="col-md-12 contain-biografi">
+                            <div class="icon-detail">
+                                <i class="fas fa-chevron-circle-down"></i>
+                            </div>
+                            <div class="nama-pejabat col-md-12">
+                                <div class="col-md-3">
+                                    Jabatan Saat Ini
+                                </div>
+                                <div class="col-md-6">
+                                    <div id="jabatansaat_ini" class="nama-pejabat">default</div>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="col-md-12 contain-biografi">
+                            <div class="icon-detail">
+                                <i class="fas fa-chevron-circle-down"></i>
+                            </div>
+                            <div class="nama-pejabat col-md-12">
+                                <div class="col-md-3">
+                                    Ditetapkan Oleh
+                                </div>
+                                <div class="col-md-8">
+                                    <div id="ditetapkan_oleh" class="nama-pejabat">default</div>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="col-md-12 contain-biografi">
+                            <div class="icon-detail">
+                                <i class="fas fa-chevron-circle-down"></i>
+                            </div>
+                            <div class="nama-pejabat col-md-12">
+                                <div class="col-md-3">
+                                    Nama Jabatan
+                                </div>
+                                <div class="col-md-6">
+                                    <div id="nama_jabatan" class="nama-pejabat">default</div>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="col-md-12 contain-biografi">
+                            <div class="icon-detail">
+                                <i class="fas fa-chevron-circle-down"></i>
+                            </div>
+                            <div class="nama-pejabat col-md-12">
+                                <div class="col-md-3">
+                                    tmt jabatan
+                                </div>
+                                <div class="col-md-6">
+                                    <div id="tmtjabatan" class="nama-pejabat">default</div>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="col-md-12 contain-biografi">
+                            <div class="icon-detail">
+                                <i class="fas fa-chevron-circle-down"></i>
+                            </div>
+                            <div class="nama-pejabat col-md-12">
+                                <div class="col-md-3">
+                                    eselon
+                                </div>
+                                <div class="col-md-6">
+                                    <div id="eselon" class="nama-pejabat">default</div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-12">
+                            <label class="lb-uppercase" for="">Riwayat Jabatan</label>
+                        </div>
+                        <div class="col-md-12">
+                            <table class="table table-hover lb-uppercase">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Nama jabatan</th>
+                                        <th>tmt Jab</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody-riwayatjabatan">
+                                    <tr>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                </tbody>
+                            </table>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-12">
+                            <label class="lb-uppercase" for="">Riwayat Tanda Jasa</label>
+                        </div>
+                        <div class="col-md-12">
+                            <table class="table table-hover lb-uppercase">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Nama Penghargaan</th>
+                                        <th>Tahun</th>
+                                        <th>Asal</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody-riwayattandajasa">
+                                    <tr>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                </tbody>
+                            </table>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-12">
+                            <label class="lb-uppercase" for="">Riwayat Pendidikan Umum</label>
+                        </div>
+                        <div class="col-md-12">
+                            <table class="table table-hover lb-uppercase">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Tingkat</th>
+                                        <th>Jurusan</th>
+                                        <th>Nama Sekolah</th>
+                                        <th>Lulus</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody-pendikumum">
+                                    <tr>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                </tbody>
+                            </table>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>
+
+<!-- chart -->
+<div class="container">  
+    <div class="row text-center">
+        <div class="pg-orgchart col-sm-12">
+            <div class="org-chart text-center">
+                <ul style="padding-top:65px">
+                    <li>
+                        <div class="user" data-idprofil="1" id="img-profil">
+                        <img src="images/team/1.jpg" class="img-responsive" />
+                        <div class="role">Direktur</div>
+                        <div class="line-down"><a class="manager" href="#"> RSUD Tugurejo</a></div>
+                        <div class="name">dr. Prihatin Iman Nugroho, M.Kes Sp.P</div>
+                        <div class="role-bold">NIP: 197108282006041016</div>
+                        </div>
+                        <div class="newline white"></div>
+                        <ul>
+                            <li>
+                                <div class="user" data-idprofil="2" id="img-profil">
+                                <img src="images/team/2.jpg" class="img-responsive"> 
+                                <div class="role">KASUBAG</div>
+                                <div class="line-down"><a class="manager" href="#"> Tata Usaha</a></div>
+                                <div class="name">dr. Yenny Yulianti, Sp.Pk</div>
+                                <div class="role-bold">NIP: 198407192009032009</div>
+                                </div>
+                                <div class="newline white"></div>
+                                <ul>
+                                    <li>
+                                        <div class="user" data-idprofil="3" id="img-profil">
+                                        <img src="images/team/team1.jpg" class="img-responsive"> 
+                                        <div class="role">KASI</div>
+                                        <div class="line-down"><a class="manager" href="#"> PELAYANAN</a></div>
+                                        <div class="name">dr. Retno Wuryani</div>
+                                        <div class="role-bold">nip: 197106212006042018</div>
+                                        </div>            
+                                    </li>
+                                    <li>
+                                        <div class="user" data-idprofil="4" id="img-profil">
+                                        <img src="images/team/4.jpg" class="img-responsive">
+                                        <div class="role">KASI</div>
+                                        <div class="line-down"><a class="manager" href="#"> KEPERAWATAN</a></div>
+                                        <div class="name">Kurnia Yuliastuti, Skep.Ners, M.kep</div>
+                                        <div class="role-bold">nip: 197507181998032002</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/struktur-organisasi/jquery-3.5.1.min.js"></script>
+<script defer src="js/struktur-organisasi/all.js"></script> 
+<!-- Latest compiled and minified JavaScript -->
+<script src="js/struktur-organisasi/bootstrap.min.js"></script>
+<script src="js/struktur-organisasi/struktur.js"></script>
+<script>
+$(function () {
+    $('.user').on('click', function(){
+       var id = $(this).data('idprofil')
+       var result = struktur.filter((node) => {
+            return node.id == id
+        });
+        
+        result.length > 0 && $('#modal-profil').modal('show');
+        console.log(result);
+        //console.log(result[0]??'empty'.jabatan??'kosong');
+        document.getElementById("lb-nama").innerHTML = result[0].nama;
+        document.getElementById("lb-jabatan").innerHTML = result[0].jabatan;
+        document.getElementById("img-pejabat").style.backgroundImage = `url(${result[0].img})`;
+        document.getElementById("nama").innerHTML = `<div class="sparator-new">:</div> ${result[0].nama}`;
+        document.getElementById("ttl").innerHTML = `<div class="sparator-new">:</div> ${result[0].ttl}`;
+        document.getElementById("agama").innerHTML = `<div class="sparator-new">:</div> ${result[0].agama}`;
+        document.getElementById("status").innerHTML = `<div class="sparator-new">:</div> ${result[0].status}`;
+        document.getElementById("jenis_kepegawaian").innerHTML = `<div class="sparator-new">:</div> ${result[0].jenis_kepegawaian}`;
+        document.getElementById("kedudukan_pegawai").innerHTML = `<div class="sparator-new">:</div> ${result[0].kedudukan_pegawai}`;
+        document.getElementById("pendidikan_terakhir").innerHTML = `<div class="sparator-new">:</div> ${result[0].pendidikan_terakhir}`;
+        document.getElementById("kelamin").innerHTML = `<div class="sparator-new">:</div> ${result[0].sex}`;
+        document.getElementById("nip"). innerHTML =  `<div class="sparator-new">:</div> ${result[0].nip}`;
+        document.getElementById("jabatansaat_ini"). innerHTML =  `<div class="sparator-new">:</div> ${result[0].jabatan_struktural.jabatan_saat_ini}`;
+        document.getElementById("ditetapkan_oleh"). innerHTML =  `<div class="sparator-new">:</div> ${result[0].jabatan_struktural.ditetapkan_oleh}`;
+        document.getElementById("nama_jabatan"). innerHTML =  `<div class="sparator-new">:</div> ${result[0].jabatan_struktural.nama_jabatan}`;
+        document.getElementById("tmtjabatan"). innerHTML =  `<div class="sparator-new">:</div> ${result[0].jabatan_struktural.tmt_jabatan}`;
+        document.getElementById("eselon"). innerHTML =  `<div class="sparator-new">:</div> ${result[0].jabatan_struktural.eselon}`;
+        
+        var html_jab = "";
+        var riwayat_jabatan = result[0].riwayat_jabatan;
+        riwayat_jabatan.forEach( jabatan => {
+            html_jab += `<tr>
+                        <td>${jabatan.no}</td>
+                        <td>${jabatan.nama_jabatan}</td>
+                        <td>${jabatan.tmt_jab}</td>
+                    </tr>`
+        })
+        document.getElementById("tbody-riwayatjabatan").innerHTML = html_jab;
+
+        var html_tandajasa = "";
+        var riwayat_tanda_jasa = result[0].riwayat_tanda_jasa
+        riwayat_tanda_jasa.forEach( tandajasa => {
+            html_tandajasa += `<tr>
+                        <td>${tandajasa.no}</td>
+                        <td>${tandajasa.nama_penghargaan}</td>
+                        <td>${tandajasa.asal}</td>
+                        <td>${tandajasa.tahun}</td>
+                    </tr>`
+        })
+        document.getElementById("tbody-riwayattandajasa").innerHTML = html_tandajasa;
+
+
+        var html_pendikumum = "";
+        var riwayat_pendidikan_umum = result[0].riwayat_pendidikan_umum
+        riwayat_pendidikan_umum.forEach( pendikumum => {
+            html_pendikumum += `<tr>
+                        <td>${pendikumum.no}</td>
+                        <td>${pendikumum.tingkat}</td>
+                        <td>${pendikumum.jurusan}</td>
+                        <td>${pendikumum.nama_sekolah}</td>
+                        <td>${pendikumum.lulus}</td>
+                    </tr>`
+        })
+        document.getElementById("tbody-pendikumum").innerHTML = html_pendikumum;
+    })    
+});
+const buttonImg = document.getElementById('img-profil');
+buttonImg.addEventListener("click", event => {
+   var id = buttonImg.dataset.idprofil
+   var result = struktur.filter((node) => {
+       return node.id == id
+   })
+
+});
+</script>
+</body>
+</html>
