@@ -3042,10 +3042,12 @@ form .error {
   padding-bottom: 30px;
 }
 .gallery-isotope .gallery-item {
-  width: 25%;
+  /* width: 25%; */
+  width: 100%;
 }
 .gallery-isotope .gallery-item.wide {
-  width: 50%;
+  /* width: 50%; */
+  width: 100%;
 }
 .gallery-isotope.grid-1 .gallery-item {
   width: 100%;
@@ -3110,15 +3112,18 @@ form .error {
 /* -------- Portfolio Isotop Item Media Query ---------- */
 @media only screen and (max-width: 991px) {
   .gallery-isotope .gallery-item {
-    width: 33.333% !important;
+    /* width: 33.333% !important; */
+    width: 100% !important;
   }
   .gallery-isotope .gallery-item.wide {
-    width: 66.6667% !important;
+    /* width: 66.6667% !important; */
+    width: 100% !important;
   }
 }
 @media only screen and (max-width: 767px) {
   .gallery-isotope .gallery-item {
-    width: 50% !important;
+    /* width: 50% !important; */
+    width: 100% !important;
   }
   .gallery-isotope .gallery-item.wide {
     width: 100% !important;
